@@ -148,16 +148,17 @@ namespace URLChecker
             }
         }
 
-        public static bool checkHasError(LinkPage page)
+        public static IList<LinkStatus> filterError(LinkPage page)
         {
+            IList<LinkStatus> ret = new List<LinkStatus>();
             foreach (LinkStatus data in page.linkData)
             {
                 if (data.code >= 400)
                 {
-                    return true;
+                    ret.Add(data);
                 }
             }
-            return false;
+            return ret;
         }
 
         public static void writeToFile(string path)
@@ -168,16 +169,13 @@ namespace URLChecker
                 {
                     foreach (LinkPage page in pageList)
                     {
-                        if (checkHasError(page))
+                        IList<LinkStatus> report = filterError(page);
+                        if (report.Count > 0)
                         {
                             sw.WriteLine($"請求網址 : {page.parent}");
-                            foreach (LinkStatus data in page.linkData)
+                            foreach (LinkStatus data in report)
                             {
-                                if (data.code >= 400)
-                                {
-                                    int code = data.code;
-                                    sw.WriteLine($"網頁連結 : {data.name}，網址 : {data.link}，錯誤代碼 : {getHTTPCodeString(code)}");
-                                }
+                                sw.WriteLine($"網頁連結 : {data.name}，網址 : {data.link}，錯誤代碼 : {getHTTPCodeString(data.code)}");
                             }
                             sw.WriteLine();
                         }
