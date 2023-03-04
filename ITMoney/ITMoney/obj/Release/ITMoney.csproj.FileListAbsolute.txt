@@ -1,0 +1,8 @@
+C:\Users\AN3512\source\repos\ITMoney\ITMoney\bin\Release\ITMoney.exe.config
+C:\Users\AN3512\source\repos\ITMoney\ITMoney\bin\Release\ITMoney.exe
+C:\Users\AN3512\source\repos\ITMoney\ITMoney\bin\Release\ITMoney.pdb
+C:\Users\AN3512\source\repos\ITMoney\ITMoney\obj\Release\ITMoney.csproj.AssemblyReference.cache
+C:\Users\AN3512\source\repos\ITMoney\ITMoney\obj\Release\ITMoney.csproj.SuggestedBindingRedirects.cache
+C:\Users\AN3512\source\repos\ITMoney\ITMoney\obj\Release\ITMoney.csproj.CoreCompileInputs.cache
+C:\Users\AN3512\source\repos\ITMoney\ITMoney\obj\Release\ITMoney.exe
+C:\Users\AN3512\source\repos\ITMoney\ITMoney\obj\Release\ITMoney.pdb

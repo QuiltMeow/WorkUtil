@@ -1,0 +1,8 @@
+C:\Users\AN3512\source\repos\SecuritySystemPeopleData\SecuritySystemPeopleData\bin\Release\SecuritySystemPeopleData.exe.config
+C:\Users\AN3512\source\repos\SecuritySystemPeopleData\SecuritySystemPeopleData\bin\Release\SecuritySystemPeopleData.exe
+C:\Users\AN3512\source\repos\SecuritySystemPeopleData\SecuritySystemPeopleData\bin\Release\SecuritySystemPeopleData.pdb
+C:\Users\AN3512\source\repos\SecuritySystemPeopleData\SecuritySystemPeopleData\obj\Release\SecuritySystemPeopleData.csproj.AssemblyReference.cache
+C:\Users\AN3512\source\repos\SecuritySystemPeopleData\SecuritySystemPeopleData\obj\Release\SecuritySystemPeopleData.csproj.SuggestedBindingRedirects.cache
+C:\Users\AN3512\source\repos\SecuritySystemPeopleData\SecuritySystemPeopleData\obj\Release\SecuritySystemPeopleData.csproj.CoreCompileInputs.cache
+C:\Users\AN3512\source\repos\SecuritySystemPeopleData\SecuritySystemPeopleData\obj\Release\SecuritySystemPeopleData.exe
+C:\Users\AN3512\source\repos\SecuritySystemPeopleData\SecuritySystemPeopleData\obj\Release\SecuritySystemPeopleData.pdb
