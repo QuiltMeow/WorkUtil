@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
 
 namespace ITMoney
 {
@@ -55,6 +57,25 @@ namespace ITMoney
         public static int getDayYearCount(int year)
         {
             return DateTime.IsLeapYear(year) ? 366 : 365;
+        }
+
+        public static IList<string> loadLineString(string fileName)
+        {
+            return new List<string>(File.ReadAllText(fileName).removeAll("\r").Split('\n'));
+        }
+
+        public static void writeStringList(string fileName, IList<string> data)
+        {
+            using (FileStream fs = new FileStream(fileName, FileMode.Create, FileAccess.Write))
+            {
+                using (StreamWriter sw = new StreamWriter(fs))
+                {
+                    foreach (string line in data)
+                    {
+                        sw.WriteLine(line);
+                    }
+                }
+            }
         }
     }
 }

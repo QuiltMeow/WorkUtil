@@ -15,7 +15,7 @@ namespace ITMoney
 
         private static readonly Array moneyType = Enum.GetValues(typeof(MoneyType));
         private static readonly IDictionary<MoneyType, int> totalMoney = new Dictionary<MoneyType, int>();
-        private static readonly IDictionary<MoneyType, IList<PropertyBase>> totalItem = new Dictionary<MoneyType, IList<PropertyBase>>();
+        private static readonly IDictionary<MoneyType, IList<RealBase>> totalItem = new Dictionary<MoneyType, IList<RealBase>>();
 
         static Program()
         {
@@ -26,14 +26,14 @@ namespace ITMoney
 
             foreach (MoneyType type in moneyType)
             {
-                totalItem[type] = new List<PropertyBase>();
+                totalItem[type] = new List<RealBase>();
             }
 
             Console.WriteLine("正在讀取檔案 ...");
             try
             {
-                movable = CSVReader.readMovableCSV(Path.Combine(inputFolder, "動產.csv"));
-                nonexpendable = CSVReader.readNonexpendableCSV(Path.Combine(inputFolder, "非消耗品.csv"));
+                movable = CSVHandler.parseMovableCSV(Path.Combine(inputFolder, "動產.csv"), CSVHandler.BIG_5_CODE_PAGE, CSVHandler.simpleBadDataOutputHandler);
+                nonexpendable = CSVHandler.parseNonexpendableCSV(Path.Combine(inputFolder, "非消耗品.csv"), CSVHandler.BIG_5_CODE_PAGE, CSVHandler.simpleBadDataOutputHandler);
                 Console.WriteLine("檔案讀取完成");
             }
             catch (Exception ex)
@@ -68,7 +68,7 @@ namespace ITMoney
                     {
                         data.feature = data.feature.Split('(')[0];
                     }
-                    totalMoney[typeValue] += data.originValue;
+                    totalMoney[typeValue] += int.Parse(data.originValue);
                     totalItem[typeValue].Add(data);
                 }
             }
@@ -89,7 +89,7 @@ namespace ITMoney
                     {
                         typeValue = (MoneyType)Enum.Parse(typeof(MoneyType), extend.Value.ToString());
                     }
-                    totalMoney[typeValue] += data.nowValue;
+                    totalMoney[typeValue] += int.Parse(data.nowValue);
                     totalItem[typeValue].Add(data);
                 }
             }
@@ -137,13 +137,14 @@ namespace ITMoney
                     {
                         using (StreamWriter sw = new StreamWriter(fs, new UTF8Encoding(true)))
                         {
-                            sw.WriteLine($"{getNumberByIndex(index++)}{type}");
-                            sw.WriteLine("財產編號,財產名稱,特徵及說明,購置日期,使用年限,原始價值,保管單位,已使用年數");
+                            sw.WriteLine($"{getChineseNumber(++index)}、{type}");
+                            sw.WriteLine("財產編號,財產名稱,特徵及說明,購置日期,使用年限,原始價值,保管單位,已使用年數,存放地點");
 
-                            IList<PropertyBase> item = totalItem[type];
-                            foreach (PropertyBase output in item)
+                            IList<RealBase> item = totalItem[type];
+                            foreach (RealBase output in item)
                             {
-                                sw.WriteLine(output.getOutputROI());
+                                decimal useYear = Math.Ceiling(output.getUseYear() * 100) / 100;
+                                sw.WriteLine($"{output.propertyId},{output.name},{output.feature},{output.buyDate},{output.ageLimit},\"{Util.getReadableMoney(output is Movable ? int.Parse(((Movable)output).originValue) : int.Parse(((Nonexpendable)output).nowValue))}\",{output.keepUnit},{useYear},{output.storePlace1}");
                             }
                             sw.WriteLine($"購置總價金{delimiter(5)}\"{Util.getReadableMoney(totalMoney[type])}\"{delimiter(2)}");
                         }
@@ -161,10 +162,16 @@ namespace ITMoney
             }
         }
 
-        private static string getNumberByIndex(int index)
+        public static string getChineseNumber(int number)
         {
-            const string number = "一二三四五六七八九十";
-            return $"{number[index]}、";
+            const string TEXT = "〇一二三四五六七八九";
+            StringBuilder ret = new StringBuilder();
+            string numberString = number.ToString();
+            foreach (char value in numberString)
+            {
+                ret.Append(TEXT[value - '0']);
+            }
+            return ret.ToString();
         }
 
         private static void pause()

@@ -1,8 +1,8 @@
-F:\Git\WorkUtil\EmptyFileGenerator\EmptyFileGenerator\bin\Release\EmptyFileGenerator.exe.config
-F:\Git\WorkUtil\EmptyFileGenerator\EmptyFileGenerator\bin\Release\EmptyFileGenerator.exe
-F:\Git\WorkUtil\EmptyFileGenerator\EmptyFileGenerator\bin\Release\EmptyFileGenerator.pdb
-F:\Git\WorkUtil\EmptyFileGenerator\EmptyFileGenerator\obj\Release\EmptyFileGenerator.csproj.AssemblyReference.cache
-F:\Git\WorkUtil\EmptyFileGenerator\EmptyFileGenerator\obj\Release\EmptyFileGenerator.csproj.SuggestedBindingRedirects.cache
-F:\Git\WorkUtil\EmptyFileGenerator\EmptyFileGenerator\obj\Release\EmptyFileGenerator.csproj.CoreCompileInputs.cache
-F:\Git\WorkUtil\EmptyFileGenerator\EmptyFileGenerator\obj\Release\EmptyFileGenerator.exe
-F:\Git\WorkUtil\EmptyFileGenerator\EmptyFileGenerator\obj\Release\EmptyFileGenerator.pdb
+D:\Project\EmptyFileGenerator\EmptyFileGenerator\bin\Release\EmptyFileGenerator.exe.config
+D:\Project\EmptyFileGenerator\EmptyFileGenerator\bin\Release\EmptyFileGenerator.exe
+D:\Project\EmptyFileGenerator\EmptyFileGenerator\bin\Release\EmptyFileGenerator.pdb
+D:\Project\EmptyFileGenerator\EmptyFileGenerator\obj\Release\EmptyFileGenerator.csproj.AssemblyReference.cache
+D:\Project\EmptyFileGenerator\EmptyFileGenerator\obj\Release\EmptyFileGenerator.csproj.SuggestedBindingRedirects.cache
+D:\Project\EmptyFileGenerator\EmptyFileGenerator\obj\Release\EmptyFileGenerator.csproj.CoreCompileInputs.cache
+D:\Project\EmptyFileGenerator\EmptyFileGenerator\obj\Release\EmptyFileGenerator.exe
+D:\Project\EmptyFileGenerator\EmptyFileGenerator\obj\Release\EmptyFileGenerator.pdb

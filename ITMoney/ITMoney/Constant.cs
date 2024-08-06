@@ -44,11 +44,11 @@ namespace ITMoney
             new KeyValuePair<MoneyType, string>(MoneyType.網路設備, "什項用具-集線器")
         };
 
-        private static readonly IList<KeyValuePair<MoneyType, string>> movableExceptAddFeature = new List<KeyValuePair<MoneyType, string>>()
+        private static readonly IList<KeyValuePair<MoneyType, string>> movableAddFeature = new List<KeyValuePair<MoneyType, string>>()
         {
         };
 
-        private static readonly IList<KeyValuePair<MoneyType, string>> nonexpendableExceptAddFeature = new List<KeyValuePair<MoneyType, string>>()
+        private static readonly IList<KeyValuePair<MoneyType, string>> nonexpendableAddFeature = new List<KeyValuePair<MoneyType, string>>()
         {
             new KeyValuePair<MoneyType, string>(MoneyType.網路設備, "網路轉換器Zyxel GS900-16"),
             new KeyValuePair<MoneyType, string>(MoneyType.儲存設備, "6TB硬碟")
@@ -56,7 +56,7 @@ namespace ITMoney
 
         public static MoneyType? getMoneyTypeByMovableNameROI(Movable movable)
         {
-            foreach (KeyValuePair<MoneyType, string> pair in movableExceptAddFeature)
+            foreach (KeyValuePair<MoneyType, string> pair in movableAddFeature)
             {
                 if (movable.feature == pair.Value)
                 {
@@ -76,7 +76,7 @@ namespace ITMoney
 
         public static MoneyType? getMoneyTypeByNonexpendableNameROI(Nonexpendable nonexpendable)
         {
-            foreach (KeyValuePair<MoneyType, string> pair in nonexpendableExceptAddFeature)
+            foreach (KeyValuePair<MoneyType, string> pair in nonexpendableAddFeature)
             {
                 if (nonexpendable.feature == pair.Value)
                 {

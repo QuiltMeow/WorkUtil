@@ -1,0 +1,11 @@
+C:\Users\AN3512\source\repos\PowerLEDOrderEditor\PowerLEDOrderEditor\bin\Release\PowerLEDOrderEditor.exe.config
+C:\Users\AN3512\source\repos\PowerLEDOrderEditor\PowerLEDOrderEditor\bin\Release\PowerLEDOrderEditor.exe
+C:\Users\AN3512\source\repos\PowerLEDOrderEditor\PowerLEDOrderEditor\bin\Release\PowerLEDOrderEditor.pdb
+C:\Users\AN3512\source\repos\PowerLEDOrderEditor\PowerLEDOrderEditor\obj\Release\PowerLEDOrderEditor.csproj.AssemblyReference.cache
+C:\Users\AN3512\source\repos\PowerLEDOrderEditor\PowerLEDOrderEditor\obj\Release\PowerLEDOrderEditor.csproj.ResolveComReference.cache
+C:\Users\AN3512\source\repos\PowerLEDOrderEditor\PowerLEDOrderEditor\obj\Release\PowerLEDOrderEditor.MainForm.resources
+C:\Users\AN3512\source\repos\PowerLEDOrderEditor\PowerLEDOrderEditor\obj\Release\PowerLEDOrderEditor.Properties.Resources.resources
+C:\Users\AN3512\source\repos\PowerLEDOrderEditor\PowerLEDOrderEditor\obj\Release\PowerLEDOrderEditor.csproj.GenerateResource.cache
+C:\Users\AN3512\source\repos\PowerLEDOrderEditor\PowerLEDOrderEditor\obj\Release\PowerLEDOrderEditor.csproj.CoreCompileInputs.cache
+C:\Users\AN3512\source\repos\PowerLEDOrderEditor\PowerLEDOrderEditor\obj\Release\PowerLEDOrderEditor.exe
+C:\Users\AN3512\source\repos\PowerLEDOrderEditor\PowerLEDOrderEditor\obj\Release\PowerLEDOrderEditor.pdb

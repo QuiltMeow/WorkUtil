@@ -1,44 +1,135 @@
-﻿using System;
+﻿using CsvHelper.Configuration.Attributes;
+using System.Reflection;
 
 namespace ITMoney
 {
     public abstract class PropertyBase
     {
-        public string serial; // 財產編號
+        [Name("機關名稱")]
+        public string organize
+        {
+            get;
+            set;
+        }
 
-        public string name; // 財產名稱
+        [Name("特徵及說明")]
+        public string feature
+        {
+            get;
+            set;
+        }
 
-        public string feature; // 特徵及說明
+        [Name("購置日期")]
+        public string buyDate
+        {
+            get;
+            set;
+        }
 
-        public string buyDate; // 購置日期
+        [Name("使用年限")]
+        public int ageLimit
+        {
+            get;
+            set;
+        }
 
-        public int useLimitYear; // 使用年限
+        [Name("保管單位")]
+        public string keepUnit
+        {
+            get;
+            set;
+        }
 
-        public int originValue; // 原始價值
+        [Name("保管人")]
+        public string keeper
+        {
+            get;
+            set;
+        }
 
-        public string keepUnit; // 保管單位
+        [Name("使用人")]
+        public string user
+        {
+            get;
+            set;
+        }
 
-        public string keepUser; // 保管人
+        [Name("備註一")]
+        public string memo1
+        {
+            get;
+            set;
+        }
 
-        public string keepPlace; // 存放地點
+        [Name("備註二")]
+        public string memo2
+        {
+            get;
+            set;
+        }
 
-        public string memo; // 備註
+        [Name("取得來源")]
+        public string obtainFrom
+        {
+            get;
+            set;
+        }
 
-        public string getSource; // 取得來源
+        [Name("經費來源")]
+        public string fundFrom
+        {
+            get;
+            set;
+        }
 
-        public string getDate; // 取得日期
+        [Name("使用狀態")]
+        public string useState
+        {
+            get;
+            set;
+        }
 
-        public string deviceId; // 設備編號
+        [Name("用途")]
+        public string purpose
+        {
+            get;
+            set;
+        }
+
+        [Name("單位")]
+        public string unit
+        {
+            get;
+            set;
+        }
+
+        [Name("廠商")]
+        public string manufacturer
+        {
+            get;
+            set;
+        }
+
+        [Name("入帳日期")]
+        public string postDate
+        {
+            get;
+            set;
+        }
 
         public decimal getUseYear()
         {
             return Util.getUseYear(buyDate);
         }
 
-        public string getOutputROI()
+        public void trimAll()
         {
-            decimal useYear = Math.Ceiling(getUseYear() * 100) / 100;
-            return $"{serial},{name},{feature},{buyDate},{useLimitYear},\"{Util.getReadableMoney(originValue)}\",{keepUnit},{useYear}";
+            PropertyInfo[] property = GetType().GetProperties();
+            foreach (PropertyInfo info in property)
+            {
+                string data = info.GetValue(this).ToString().Trim();
+                info.SetValue(this, data);
+            }
         }
     }
 }

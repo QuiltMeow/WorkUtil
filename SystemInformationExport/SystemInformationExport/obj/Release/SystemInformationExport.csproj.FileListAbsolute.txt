@@ -1,0 +1,10 @@
+C:\Users\AN3512\source\repos\SystemInformationExport\SystemInformationExport\bin\Release\SystemInformationExport.exe.config
+C:\Users\AN3512\source\repos\SystemInformationExport\SystemInformationExport\bin\Release\SystemInformationExport.exe
+C:\Users\AN3512\source\repos\SystemInformationExport\SystemInformationExport\bin\Release\SystemInformationExport.pdb
+C:\Users\AN3512\source\repos\SystemInformationExport\SystemInformationExport\obj\Release\SystemInformationExport.csproj.AssemblyReference.cache
+C:\Users\AN3512\source\repos\SystemInformationExport\SystemInformationExport\obj\Release\SystemInformationExport.MainForm.resources
+C:\Users\AN3512\source\repos\SystemInformationExport\SystemInformationExport\obj\Release\SystemInformationExport.Properties.Resources.resources
+C:\Users\AN3512\source\repos\SystemInformationExport\SystemInformationExport\obj\Release\SystemInformationExport.csproj.GenerateResource.cache
+C:\Users\AN3512\source\repos\SystemInformationExport\SystemInformationExport\obj\Release\SystemInformationExport.csproj.CoreCompileInputs.cache
+C:\Users\AN3512\source\repos\SystemInformationExport\SystemInformationExport\obj\Release\SystemInformationExport.exe
+C:\Users\AN3512\source\repos\SystemInformationExport\SystemInformationExport\obj\Release\SystemInformationExport.pdb

@@ -1,15 +1,14 @@
-﻿namespace ITMoney
-{
-    public class Nonexpendable : PropertyBase
-    {
-        public int nowValue // 現值金額 =  原始價值
-        {
-            get
-            {
-                return originValue;
-            }
-        }
+﻿using CsvHelper.Configuration.Attributes;
 
-        public string useUser; // 使用人
+namespace ITMoney
+{
+    public class Nonexpendable : RealBase
+    {
+        [Name("現值金額")]
+        public string nowValue
+        {
+            get;
+            set;
+        }
     }
 }
